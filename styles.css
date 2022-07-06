@@ -1,8 +1,10 @@
+/* height100vhでbodyを画面いっぱいに指定 */
 body {
   font-size: 18px;
   height: 100vh;
 }
 
+/* コンテナクラスを作成して、縦横中央よせ */
 .container {
   display: flex;
   justify-content: center;
@@ -10,6 +12,7 @@ body {
   height: 100%;
 }
 
+/* ボタンの作成 */
 #open,
 #close {
   cursor: pointer;
@@ -21,6 +24,7 @@ body {
   margin: 16px auto;
 }
 
+/* モーダルを開いた時の背景色 */
 #mask {
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -31,6 +35,7 @@ body {
   z-index: 1;
 }
 
+/* モーダルのデザイン */
 #modal {
   background: #fff;
   width: 300px;
@@ -46,10 +51,12 @@ body {
   z-index: 2;
 }
 
+/* id=maskにhiddenクラスが付いてる時はmask非表示 */
 #mask.hidden {
   display: none;
 }
 
+/* id=modalにhiddenクラスが付いてる時はmodalを画面外へ避けておく */
 #modal.hidden {
   transform: translate(0, -500px);
 }
